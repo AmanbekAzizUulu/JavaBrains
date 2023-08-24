@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author Amanbek
+ *
+ */
+module JavaBrains
+{
+}
