@@ -4,6 +4,7 @@ package understandinglambdas.part_2;
 
 
 import understandinglambdas.part_2.functionalInterfaces.Concatenator;
+import understandinglambdas.part_2.functionalInterfaces.MyLambda;
 import understandinglambdas.part_2.functionalInterfaces.SumOfTwo;
 
 
@@ -25,20 +26,17 @@ public class GreeterDemo
         SumOfTwo     summator         = (num_1, num_2) -> num_1 + num_2;
         Concatenator conn             = (str_1, str_2) -> str_1 + str_2;
 
-        
-        conn.info ();
-        summator.info ();
-        
-        
+        /*
+         * This is how you execute lambda expression. By calling the interface method on it, 
+         * just as if it were an instance of a class.
+         * 
+         */
+        myLambdaFunction.foo ();
+
+        System.out.println ("\tSum of two integers: " + summator.sum (25, 25));
+        System.out.println ("\tConcatenated strings: '" + conn.concatenate ("Hello,", " World!" + "'"));
+
     }
 
+
 }
-
-
-
-@ FunctionalInterface
-interface MyLambda
-{
-    void foo ();
-}
-

@@ -8,6 +8,4 @@ public class Greeter
     {
         greeter.perform ();
     }
-    
-    
 }
